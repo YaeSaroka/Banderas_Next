@@ -1,10 +1,9 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+  background-image: url('https://dbdzm869oupei.cloudfront.net/img/sticker/preview/16822.png');
+  background-size: cover; /* Asegura que la imagen de fondo cubra todo el contenedor */
+  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  min-height: 100vh; 
 }
 
 .description {
@@ -47,11 +46,13 @@
 }
 
 .card {
-  padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para crear efecto de elevación */
+  max-width: 600px;
+  margin: 0 auto; /* Centra la tarjeta horizontalmente */
+  align-items: center;
 }
 
 .card span {
@@ -69,7 +70,7 @@
   opacity: 0.6;
   font-size: 0.9rem;
   line-height: 1.5;
-  max-width: 30ch;
+  margin-top: 5px;
   text-wrap: balance;
 }
 
@@ -78,9 +79,30 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 4rem 0;
+
+}
+#slato{
+  width: 100%;
+}
+.contenido{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
+.contenido2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+.button1{
+  background-color: black;
+  color: white;
+}
 .center::before {
   background: var(--secondary-glow);
   border-radius: 50%;
@@ -105,26 +127,6 @@
   transform: translateZ(0);
 }
 
-.logo {
-  position: relative;
-}
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
-    border: 1px solid rgba(var(--card-border-rgb), 0.15);
-  }
-
-  .card:hover span {
-    transform: translateX(4px);
-  }
-}
-
-@media (prefers-reduced-motion) {
-  .card:hover span {
-    transform: none;
-  }
-}
 
 /* Mobile */
 @media (max-width: 700px) {
